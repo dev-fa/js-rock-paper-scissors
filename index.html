@@ -15,7 +15,42 @@
 </head>
 
 <body>
-  <h1>Rock, Paper, Scissors</h1>
+  <main>
+    <!--
+    You Picked
+    The House Picked
+    You Win
+    You Lose
+    Play Again 
+    -->
+    <div class="scoreboard">
+      <img class="scoreboard__logo" src="./assets/images/logo.svg" alt="Rock, paper, scissors">
+      <div class="score-card">
+        <p class="score-card__title">Score</p>
+        <p class="score-card__number">12</p>
+      </div>
+    </div>
+
+    <div class="game">
+      <div class="game__button-wrap game__button-wrap--rock rock">
+        <div class="game__button rock">
+          <img src="./assets/images/icon-rock.svg" alt="rock">
+        </div>
+      </div>
+      <div class="game__button-wrap game__button-wrap--paper paper">
+        <div class="game__button paper">
+          <img src="./assets/images/icon-paper.svg" alt="paper">
+        </div>
+      </div>
+      <div class="game__button-wrap game__button-wrap--scissors scissors">
+        <div class="game__button scissors">
+          <img src="./assets/images/icon-scissors.svg" alt="scissors">
+        </div>
+      </div>
+    </div>
+
+    <button class="btn-ghost" type="button">Rules</button>
+  </main>
 </body>
 
 </html>
