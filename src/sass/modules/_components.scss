@@ -1,0 +1,116 @@
+@use 'functions' as f;
+
+.scoreboard {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 700px;
+  padding: 12px;
+  border: 2px solid rgba($color: #fff, $alpha: 0.3);
+  border-radius: 5px;
+
+  &__logo {
+    width: 83px;
+    height: 48px;
+  }
+}
+
+.score-card {
+  background-color: var(--clr-neutral-50);
+  border-radius: 8px;
+  padding: 10px 24px;
+
+  &__title {
+    color: var(--clr-neutral-500);
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-size: f.rem(10);
+    font-weight: 600;
+  }
+
+  &__number {
+    color: var(--clr-neutral-700);
+    font-size: f.rem(40);
+    font-weight: 700;
+    text-align: center;
+  }
+}
+
+.game {
+  display: grid;
+  align-items: center;
+  width: 100%;
+  max-width: 312px;
+  height: 282px;
+  background-image: url(./assets/images/bg-triangle.svg);
+  background-repeat: no-repeat;
+  background-position: top 55px center;
+  // background-size: 166px 188px;
+  background-size: 225px 225px;
+  grid-template: repeat(2, auto) / repeat(2, auto);
+  grid-template-areas:
+    'p s'
+    'r r';
+
+  &__button {
+    border-radius: 100%;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--clr-neutral-50);
+    border-top: 5px solid var(--clr-neutral-100);
+  }
+
+  &__button-wrap {
+    border-radius: 100%;
+    width: 130px;
+    height: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--drop-shadow-500);
+    border-bottom: 5px solid;
+
+    &--rock {
+      background: var(--gradient-red);
+      border-bottom-color: var(--clr-accent-red);
+    }
+
+    &--paper {
+      background: var(--gradient-blue);
+      border-bottom-color: var(--clr-accent-blue);
+    }
+
+    &--scissors {
+      background: var(--gradient-orange);
+      border-bottom-color: var(--clr-accent-orange);
+    }
+  }
+}
+
+.rock {
+  grid-area: r;
+  justify-self: center;
+}
+
+.paper {
+  grid-area: p;
+}
+
+.scissors {
+  grid-area: s;
+  justify-self: end;
+}
+
+.btn-ghost {
+  padding: 10px 36px;
+  background: none;
+  border: 1px solid var(--clr-neutral-50);
+  border-radius: 8px;
+  color: var(--clr-neutral-50);
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+}
