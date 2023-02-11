@@ -1,0 +1,127 @@
+@use 'functions' as f;
+
+.game {
+  display: grid;
+  align-items: center;
+  width: 100%;
+  max-width: 312px;
+  height: 282px;
+  background-image: url(./assets/images/bg-triangle.svg);
+  background-repeat: no-repeat;
+  background-position: top 55px center;
+  // background-size: 166px 188px;
+  background-size: 225px 225px;
+  grid-template: repeat(2, auto) / repeat(2, auto);
+  grid-template-areas:
+    'p s'
+    'r r';
+  margin-bottom: 128px;
+
+  &--post-choice {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 312px;
+    margin-bottom: 64px;
+  }
+
+  &__player-choice,
+  &__house-choice {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+
+  &__player-desc,
+  &__house-desc {
+    font-size: f.rem(15);
+    color: var(--clr-neutral-50);
+    letter-spacing: 1.88px;
+  }
+
+  &__button {
+    border-radius: 100%;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--clr-neutral-50);
+    border-top: 5px solid var(--clr-neutral-100);
+
+    &--empty {
+      background-color: rgba($color: #000000, $alpha: 0.1);
+      border: none;
+    }
+  }
+
+  &__button-wrap {
+    border-radius: 100%;
+    width: 130px;
+    height: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--drop-shadow-500);
+    border-bottom: 5px solid;
+
+    &:hover,
+    &:active {
+      box-shadow: 0 0 0 20px rgba(255, 255, 255, 0.06);
+    }
+
+    &--highlight {
+      box-shadow: 0 0 0 20px rgba(255, 255, 255, 0.06),
+        0 0 0 40px rgba(255, 255, 255, 0.04),
+        0 0 0 60px rgba(255, 255, 255, 0.02);
+    }
+
+    &--empty {
+      box-shadow: none;
+      border: none;
+    }
+
+    &--rock {
+      background: var(--gradient-red);
+      border-bottom-color: var(--clr-accent-red);
+    }
+
+    &--paper {
+      background: var(--gradient-blue);
+      border-bottom-color: var(--clr-accent-blue);
+    }
+
+    &--scissors {
+      background: var(--gradient-orange);
+      border-bottom-color: var(--clr-accent-orange);
+    }
+  }
+}
+
+.rock {
+  grid-area: r;
+  justify-self: center;
+}
+
+.paper {
+  grid-area: p;
+}
+
+.scissors {
+  grid-area: s;
+  justify-self: end;
+}
+
+.game-status {
+  text-align: center;
+  margin-bottom: 48px;
+  height: 130px;
+
+  &__message {
+    color: var(--clr-neutral-50);
+    font-size: f.rem(56);
+    font-weight: 700;
+    margin-bottom: 16px;
+  }
+}

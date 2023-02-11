@@ -9,6 +9,7 @@
   padding: 12px;
   border: 2px solid rgba($color: #fff, $alpha: 0.3);
   border-radius: 5px;
+  margin-bottom: 96px;
 
   &__logo {
     width: 83px;
@@ -37,72 +38,19 @@
   }
 }
 
-.game {
-  display: grid;
-  align-items: center;
-  width: 100%;
-  max-width: 312px;
-  height: 282px;
-  background-image: url(./assets/images/bg-triangle.svg);
-  background-repeat: no-repeat;
-  background-position: top 55px center;
-  // background-size: 166px 188px;
-  background-size: 225px 225px;
-  grid-template: repeat(2, auto) / repeat(2, auto);
-  grid-template-areas:
-    'p s'
-    'r r';
+.btn-primary {
+  background-color: var(--clr-neutral-50);
+  color: var(--clr-neutral-700);
+  font-size: f.rem(16);
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  padding: 14px 60px;
 
-  &__button {
-    border-radius: 100%;
-    width: 100px;
-    height: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--clr-neutral-50);
-    border-top: 5px solid var(--clr-neutral-100);
+  &:hover,
+  &:active {
+    color: var(--clr-accent-red);
   }
-
-  &__button-wrap {
-    border-radius: 100%;
-    width: 130px;
-    height: 130px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: var(--drop-shadow-500);
-    border-bottom: 5px solid;
-
-    &--rock {
-      background: var(--gradient-red);
-      border-bottom-color: var(--clr-accent-red);
-    }
-
-    &--paper {
-      background: var(--gradient-blue);
-      border-bottom-color: var(--clr-accent-blue);
-    }
-
-    &--scissors {
-      background: var(--gradient-orange);
-      border-bottom-color: var(--clr-accent-orange);
-    }
-  }
-}
-
-.rock {
-  grid-area: r;
-  justify-self: center;
-}
-
-.paper {
-  grid-area: p;
-}
-
-.scissors {
-  grid-area: s;
-  justify-self: end;
 }
 
 .btn-ghost {
