@@ -11,23 +11,18 @@
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="./style.css">
+  <script src="main.js" defer></script>
   <title>Rock, Paper, Scissors</title>
 </head>
 
 <body>
   <main>
-    <!--
-    You Picked
-    The House Picked
-    You Win
-    You Lose
-    Play Again 
-    -->
+
     <div class="scoreboard">
       <img class="scoreboard__logo" src="./assets/images/logo.svg" alt="Rock, paper, scissors">
       <div class="score-card">
         <p class="score-card__title">Score</p>
-        <p class="score-card__number">12</p>
+        <p class="score-card__number">0</p>
       </div>
     </div>
 
@@ -49,7 +44,17 @@
       </div>
     </div>
 
-    <button class="btn-ghost" type="button">Rules</button>
+    <button class="btn-ghost" type="button" id="open-modal">Rules</button>
+    <dialog class="rules-modal" id="modal">
+      <div class="rules-modal__container">
+        <p class="rules-modal__title">RULES</p>
+        <p class="sr-only">rock beats scissors, scissors beat paper, paper beats rock</p>
+        <iframe src="./assets/images/image-rules.svg" title="rules svg" class="rules-modal__rules"
+          aria-hidden="true"></iframe>
+        <img src="./assets/images/icon-close.svg" class="rules-modal__close" id="close-modal" alt="close button">
+      </div>
+    </dialog>
+
   </main>
 </body>
 

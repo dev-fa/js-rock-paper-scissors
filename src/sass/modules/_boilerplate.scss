@@ -9,9 +9,9 @@
     hsl(214, 47%, 23%),
     hsl(237, 49%, 15%)
   );
-  --clr-accent-red: #9d1634;
-  --clr-accent-blue: #2a45c2;
-  --clr-accent-orange: #c76c1b;
+  --clr-accent-red: hsl(347, 75%, 35%);
+  --clr-accent-blue: hsl(229, 64%, 46%);
+  --clr-accent-orange: hsl(28, 76%, 44%);
   --clr-neutral-500: hsl(229, 64%, 46%);
   --clr-neutral-700: hsl(229, 25%, 31%);
   --clr-neutral-300: hsl(217, 16%, 45%);
@@ -45,4 +45,15 @@ body {
 
 button {
   font-family: var(--ff-primary);
+}
+
+.sr-only {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
 }

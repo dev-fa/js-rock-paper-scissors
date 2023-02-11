@@ -1,0 +1,33 @@
+@use 'functions' as f;
+
+.rules-modal {
+  top: 0;
+  min-width: 100%;
+  min-height: 100%;
+  border: none;
+
+  &__container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  &__title {
+    color: var(--clr-neutral-700);
+    font-weight: 700;
+    font-size: f.rem(32);
+  }
+
+  &__rules {
+    border: none;
+    width: 305px;
+    height: 271px;
+  }
+
+  &__close {
+    width: 40px;
+    height: 40px;
+  }
+}

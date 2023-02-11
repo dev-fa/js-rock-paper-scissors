@@ -113,4 +113,10 @@
   color: var(--clr-neutral-50);
   text-transform: uppercase;
   letter-spacing: 2.5px;
+
+  &:hover,
+  &:active {
+    background-color: var(--clr-neutral-50);
+    color: var(--clr-neutral-700);
+  }
 }
