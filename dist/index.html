@@ -27,71 +27,25 @@
     </div>
 
     <div class="game">
-      <div class="game__button-wrap game__button-wrap--rock rock">
-        <div class="game__button rock">
+      <div class="game__button-wrap game__button-wrap--rock rock" data-choice="rock">
+        <div class="game__button rock" data-choice="rock">
           <img src="./assets/images/icon-rock.svg" alt="rock">
         </div>
       </div>
-      <div class="game__button-wrap game__button-wrap--paper paper">
-        <div class="game__button paper">
+      <div class="game__button-wrap game__button-wrap--paper paper" data-choice="paper">
+        <div class="game__button paper" data-choice="paper">
           <img src="./assets/images/icon-paper.svg" alt="paper">
         </div>
       </div>
-      <div class="game__button-wrap game__button-wrap--scissors scissors">
-        <div class="game__button scissors">
+      <div class="game__button-wrap game__button-wrap--scissors scissors" data-choice="scissors">
+        <div class="game__button scissors" data-choice="scissors">
           <img src="./assets/images/icon-scissors.svg" alt="scissors">
         </div>
       </div>
     </div>
 
-    <!-- <div class="game--post-choice">
-      <div class="game__player-choice">
-        <div class="game__button-wrap game__button-wrap--rock rock">
-          <div class="game__button rock">
-            <img src="./assets/images/icon-rock.svg" alt="rock">
-          </div>
-        </div>
-        <p class="game__player-desc">YOU PICKED</p>
-      </div>
-
-      <div class="game__house-choice">
-        <div class="game__button-wrap game__button-wrap--empty">
-          <div class="game__button game__button--empty">
-          </div>
-        </div>
-        <p class="game__house-desc">THE HOUSE PICKED</p>
-      </div>
-    </div>
-
-    <div class="game-status"></div> -->
-
-    <!-- <div class="game--post-choice">
-      <div class="game__player-choice">
-        <div class="game__button-wrap game__button-wrap--rock rock game__button-wrap--highlight">
-          <div class="game__button rock">
-            <img src="./assets/images/icon-rock.svg" alt="rock">
-          </div>
-        </div>
-        <p class="game__player-desc">YOU PICKED</p>
-      </div>
-
-      <div class="game__house-choice">
-        <div class="game__button-wrap game__button-wrap--paper paper">
-          <div class="game__button paper">
-            <img src="./assets/images/icon-paper.svg" alt="paper">
-          </div>
-        </div>
-        <p class="game__house-desc">THE HOUSE PICKED</p>
-      </div>
-    </div>
-
-    <div class="game-status">
-      <p class="game-status__message">YOU LOSE</p>
-      <button class="btn-primary" type="button">PLAY AGAIN</button>
-    </div> -->
-
     <button class="btn-ghost" type="button" id="open-modal">Rules</button>
-    <dialog class="rules-modal" id="modal">
+    <dialog class="rules-modal" id="rules-modal">
       <div class="rules-modal__container">
         <p class="rules-modal__title">RULES</p>
         <p class="sr-only">rock beats scissors, scissors beat paper, paper beats rock</p>

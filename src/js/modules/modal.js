@@ -1,11 +1,14 @@
-const modal = document.getElementById('modal');
+export default class Modal {
+  constructor(id) {
+    this.id = id;
+    this.element = document.getElementById(this.id);
+  }
 
-function openModal() {
-  modal.showModal();
+  open() {
+    this.element.showModal();
+  }
+
+  close() {
+    this.element.close();
+  }
 }
-
-function closeModal() {
-  modal.close();
-}
-
-export { modal, openModal, closeModal };
