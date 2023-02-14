@@ -1,4 +1,5 @@
 @use 'functions' as f;
+@use 'breakpoints' as b;
 
 .scoreboard {
   display: flex;
@@ -11,9 +12,21 @@
   border-radius: 5px;
   margin-bottom: 96px;
 
+  @include b.breakpoint(large) {
+    padding: 18px 24px;
+    border-radius: 15px;
+    margin-bottom: 0;
+    margin-bottom: 32px;
+  }
+
   &__logo {
     width: 83px;
     height: 48px;
+
+    @include b.breakpoint(large) {
+      width: 155px;
+      height: 93px;
+    }
   }
 }
 
@@ -22,12 +35,20 @@
   border-radius: 8px;
   padding: 10px 24px;
 
+  @include b.breakpoint(large) {
+    padding: 16px 48px;
+  }
+
   &__title {
     color: var(--clr-neutral-500);
     text-transform: uppercase;
     letter-spacing: 2.5px;
     font-size: f.rem(10);
     font-weight: 600;
+
+    @include b.breakpoint(large) {
+      font-size: f.rem(16);
+    }
   }
 
   &__number {
@@ -35,6 +56,10 @@
     font-size: f.rem(40);
     font-weight: 700;
     text-align: center;
+
+    @include b.breakpoint(large) {
+      font-size: f.rem(64);
+    }
   }
 }
 
@@ -66,5 +91,9 @@
   &:active {
     background-color: var(--clr-neutral-50);
     color: var(--clr-neutral-700);
+  }
+
+  @include b.breakpoint(large) {
+    align-self: flex-end;
   }
 }

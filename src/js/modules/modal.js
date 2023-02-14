@@ -11,4 +11,10 @@ export default class Modal {
   close() {
     this.element.close();
   }
+
+  outsideClick(e) {
+    if (e.target === this.element) {
+      this.element.close();
+    }
+  }
 }

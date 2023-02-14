@@ -13,6 +13,9 @@ openModalBtn.addEventListener('click', () => {
 closeModalBtn.addEventListener('click', () => {
   rulesModal.close();
 });
+window.addEventListener('click', (e) => {
+  rulesModal.outsideClick(e);
+});
 
 // GAME LOGIC
 const session = new Game();
