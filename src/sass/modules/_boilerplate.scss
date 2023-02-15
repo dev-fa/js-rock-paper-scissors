@@ -59,3 +59,7 @@ button {
   position: absolute;
   width: 1px;
 }
+
+.no-hover {
+  pointer-events: none;
+}

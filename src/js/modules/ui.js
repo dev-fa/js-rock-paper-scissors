@@ -19,8 +19,8 @@ export default class UI {
       }
       game.innerHTML = `
         <div class="game__player-choice">
-        <div class="game__button-wrap game__button-wrap--${player} ${player}">
-            <div class="game__button ${player}">
+        <div class="game__button-wrap game__button-wrap--increase game__button-wrap--${player} ${player} no-hover">
+            <div class="game__button game__button--increase ${player}">
             <img src="./assets/images/icon-${player}.svg" alt="${player}">
             </div>
         </div>
@@ -28,13 +28,14 @@ export default class UI {
         </div>
 
         <div class="game__house-choice">
-        <div class="game__button-wrap game__button-wrap--empty">
-            <div class="game__button game__button--empty">
+        <div class="game__button-wrap game__button-wrap--increase game__button-wrap--empty no-hover">
+            <div class="game__button game__button--increase game__button--empty">
             </div>
         </div>
         <p class="game__house-desc">THE HOUSE PICKED</p>
         </div>
       `;
+
       const gameStatus = document.createElement('div');
       gameStatus.classList.add('game-status');
 
@@ -48,10 +49,11 @@ export default class UI {
       game.removeChild(game.lastChild);
     }
 
-    game.innerHTML = `
+    if (message === 'YOU WIN') {
+      game.innerHTML = `
         <div class="game__player-choice">
-        <div class="game__button-wrap game__button-wrap--${player} ${player} game__button-wrap--highlight">
-            <div class="game__button ${player}">
+        <div class="game__button-wrap game__button-wrap--increase game__button-wrap--${player} ${player} game__button-wrap--highlight no-hover">
+            <div class="game__button game__button--increase ${player}">
             <img src="./assets/images/icon-${player}.svg" alt="${player}">
             </div>
         </div>
@@ -59,14 +61,55 @@ export default class UI {
         </div>
 
         <div class="game__house-choice">
-        <div class="game__button-wrap game__button-wrap--${computer} ${computer}">
-            <div class="game__button ${computer}">
+        <div class="game__button-wrap game__button-wrap--increase game__button-wrap--${computer} ${computer} no-hover">
+            <div class="game__button game__button--increase ${computer}">
             <img src="./assets/images/icon-${computer}.svg" alt="${computer}">
             </div>
         </div>
         <p class="game__house-desc">THE HOUSE PICKED</p>
         </div>
-    `;
+      `;
+    } else if (message === 'YOU LOSE') {
+      game.innerHTML = `
+        <div class="game__player-choice">
+        <div class="game__button-wrap game__button-wrap--increase game__button-wrap--${player} ${player} no-hover">
+            <div class="game__button game__button--increase ${player}">
+            <img src="./assets/images/icon-${player}.svg" alt="${player}">
+            </div>
+        </div>
+        <p class="game__player-desc">YOU PICKED</p>
+        </div>
+
+        <div class="game__house-choice">
+        <div class="game__button-wrap game__button-wrap--increase game__button-wrap--${computer} ${computer}  game__button-wrap--highlight no-hover">
+            <div class="game__button game__button--increase ${computer}">
+            <img src="./assets/images/icon-${computer}.svg" alt="${computer}">
+            </div>
+        </div>
+        <p class="game__house-desc">THE HOUSE PICKED</p>
+        </div>
+      `;
+    } else {
+      game.innerHTML = `
+        <div class="game__player-choice">
+        <div class="game__button-wrap game__button-wrap--increase game__button-wrap--${player} ${player} no-hover">
+            <div class="game__button game__button--increase ${player}">
+            <img src="./assets/images/icon-${player}.svg" alt="${player}">
+            </div>
+        </div>
+        <p class="game__player-desc">YOU PICKED</p>
+        </div>
+
+        <div class="game__house-choice">
+        <div class="game__button-wrap game__button-wrap--increase game__button-wrap--${computer} ${computer} no-hover">
+            <div class="game__button game__button--increase ${computer}">
+            <img src="./assets/images/icon-${computer}.svg" alt="${computer}">
+            </div>
+        </div>
+        <p class="game__house-desc">THE HOUSE PICKED</p>
+        </div>
+      `;
+    }
 
     const gameStatus = document.querySelector('.game-status');
 
