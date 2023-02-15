@@ -36,5 +36,5 @@ A rock, paper, scissors game made with vanilla javascript. Fully responsive!
 
 ## Acknowledgements
 
-Design originally from: [frontend-mentor](https://www.frontendmentor.io/challenges/rock-paper-scissors-game-pTgwgvgH)
-All the code was written by me.
+- Design originally from: [frontend-mentor](https://www.frontendmentor.io/challenges/rock-paper-scissors-game-pTgwgvgH).
+- All the code was written by me.
