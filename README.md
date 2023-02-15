@@ -1,6 +1,6 @@
 # Rock, Paper, Scissors
 
-Brief Summary
+A rock, paper, scissors game made with vanilla javascript. Fully responsive!
 
 ## Table of contents
 
@@ -12,20 +12,29 @@ Brief Summary
 
 ## Screenshots
 
-Paste project screenshots here
+![Desktop View](./rps-desktop.png 'Desktop')
+![Mobile View](./rps-mobile.png 'Mobile')
 
 ## Links
 
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [rock paper scissors](https://dev-fa.github.io/rock-paper-scissors/)
+
+## Features
+
+- Responsive Design
 
 ## Built with
 
 - Semantic HTML5
 - SCSS
 - ES6 Javascript
+- Webpack
 
 ## Author
 
 - Github - [dev-fa](https://github.com/dev-fa)
 
 ## Acknowledgements
+
+Design originally from: [frontend-mentor](https://www.frontendmentor.io/challenges/rock-paper-scissors-game-pTgwgvgH)
+All the code was written by me.
