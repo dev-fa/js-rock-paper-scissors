@@ -6,6 +6,7 @@ A rock, paper, scissors game made with vanilla javascript. Fully responsive!
 
 - [Screenshots](#screenshots)
 - [Links](#links)
+- [Features](#features)
 - [Built with](#built-with)
 - [Author](#author)
 - [Acknowledgements](#acknowledgements)
